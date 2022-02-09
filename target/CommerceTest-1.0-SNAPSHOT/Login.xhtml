@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <h:outputStylesheet library="css" name="Login.css"/>
+</h:head>
+<h:body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn ">
+                <img class="zoom" style="margin: 20px" src="resources/Picture.svg" id="icon" alt="User Icon" />
+            </div>
+
+            <!-- Login Form -->
+            <h:form>
+                <h:inputText id="login" class="fadeIn second" a:placeholder="Username" value="#{authenticationBean.username}"/>
+                <h:inputText id="password" class="fadeIn third" a:placeholder="Password" value="#{authenticationBean.password}"/>
+                <h:commandButton type="submit" class="fadeIn fourth" value="log in" action="#{authenticationBean.login()}"/>
+            </h:form>
+
+            <!-- Remind Password -->
+            <div id="formFooter">
+                <a class="underlineHover" href="Register.xhtml">Register</a>
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>

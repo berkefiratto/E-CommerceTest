@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+<h:head>
+    <h:outputStylesheet library="css" name="Login.css"/>
+</h:head>
+<h:body>
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+
+            <div class="fadeIn ">
+                <img class="zoom" style="margin: 20px" src="resources/New.svg" id="icon" alt="User Icon"/>
+            </div>
+
+            <!-- Register Form -->
+            <h:form>
+                <h:inputText id="name" class="fadeIn third" a:placeholder="Name" value="#{userBean.user.name}"/>
+                <h:inputText id="lastname" class="fadeIn third" a:placeholder="Last Name"
+                             value="#{userBean.user.lastName}"/>
+                <h:inputText id="email" class="fadeIn third" a:placeholder="e-Mail" value="#{userBean.user.email}"/>
+                <h:inputText id="username" class="fadeIn third" a:placeholder="Username"
+                             value="#{userBean.user.username}"/>
+                <h:inputText id="password" class="fadeIn third" a:placeholder="Password"
+                             value="#{userBean.user.password}"/>
+                <h:inputText id="passwordValidator" class="fadeIn third" a:placeholder="Repeat Password"
+                             value="#{userBean.user.passwordRepeat}"/>
+                <h:commandButton class="fadeIn fourth " value="Register" action="#{userBean.save()}"/>
+            </h:form>
+
+            <!-- Remind Password -->
+            <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+            </div>
+        </div>
+    </div>
+</h:body>
+</html>
